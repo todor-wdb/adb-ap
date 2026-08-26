@@ -1,10 +1,10 @@
 ["AFK Stages"]
-Attempts = 2
+Attempts = 5
 Formations = 10
+"Run Manual Formations Last" = true
 "Skip Manual Formations" = false
-"Run Manual Formations Last" = false
 "Spend Gold" = false
-"Start with current Formation" = false
+"Start with current Formation" = true
 "Suggested Formations" = true
 
 ["Arcane Labyrinth"]
@@ -15,14 +15,56 @@ Difficulty = 13
 "Claim Stage Rewards" = false
 
 ["Custom Routine 1"]
-"Display Name" = "Push Stages"
+"Display Name" = "DAILY AFK LOOP"
 Repeat = true
-"Task List" = ["Season AFK Stages", "AFK Stages", "Claim AFK Rewards", "Equip new Equipment"]
+
+[["Custom Routine 1"."Task List"]]
+name = "Dailies"
+repeat = true
+
+[["Custom Routine 1"."Task List"]]
+name = "Level Up All Heroes"
+repeat = true
+
+[["Custom Routine 1"."Task List"]]
+name = "Equip new Equipment"
+repeat = true
+
+[["Custom Routine 1"."Task List"]]
+name = "Dura's Trials"
+repeat = true
+
+[["Custom Routine 1"."Task List"]]
+name = "Season Legend Trial"
+repeat = true
+
+[["Custom Routine 1"."Task List"]]
+name = "Season AFK Stages"
+repeat = true
+
+[["Custom Routine 1"."Task List"]]
+name = "AFK Stages"
+repeat = true
 
 ["Custom Routine 2"]
-"Display Name" = ""
+"Display Name" = "DAILY SIDE PUSH"
 Repeat = true
-"Task List" = []
+
+[["Custom Routine 2"."Task List"]]
+name = "Level Up All Heroes"
+repeat = true
+
+[["Custom Routine 2"."Task List"]]
+name = "Equip new Equipment"
+repeat = true
+
+[["Custom Routine 2"."Task List"]]
+name = "Dura's Trials"
+repeat = true
+
+[["Custom Routine 2"."Task List"]]
+name = "Season Legend Trial"
+repeat = true
 
 ["Custom Routine 3"]
 "Display Name" = ""
@@ -30,59 +72,62 @@ Repeat = true
 "Task List" = []
 
 [Dailies]
-"Claim Daily Rewards" = true
-"Mystical House" = true
-"Single Pull" = false
-"Dream Realm" = true
+"AFK Stages" = true
 "Arena Battle" = false
+"Buy All Affinity" = false
+"Buy Discount Affinity" = true
+"Buy Temporal Essences" = false
+"Claim Daily Rewards" = true
 "Claim Friend/Mail/Quest Rewards" = true
 "Collect Affinity" = true
-"Run Dura's Trials" = true
-"AFK Stages" = true
-"Buy Discount Affinity" = true
-"Buy All Affinity" = false
-"Buy Temporal Essences" = false
+"Dream Realm" = true
 "Essence Buy Count" = 1
+"Mystical House" = true
+"Run Dura's Trials" = true
 "Run Legend Trials" = true
+"Single Pull" = false
 
 ["Dream Realm"]
 "Spend Gold" = false
 
-["Guild Manager Scan"]
-"Guild Members API URL" = "https://clcozchimagtnzohuvsk.supabase.co/rest/v1/guild_states?id=eq.citadel-chqp&select=state&apikey=sb_publishable_LVK-OqTDRQ572wbfDaMqDQ_-7xxdv6n"
-"Days to Scan" = 1
-"Scan Supreme Arena" = true
-"Scan Guild Activeness" = false
-"Scan DR Today on Sunday" = false
-"Debug OCR Output" = true
-"Scan AFK Stages Rankings" = false
-"AFK Stage Phases to Scan" = 1
-"Ignore Day Restrictions" = false
-"Use Qwen2-VL (GPU)" = false
-"Confirm Qwen2-VL Download (~2.2 GB)" = false
-
 ["Dura's Trials"]
 Attempts = 5
 Formations = 10
+"Run Manual Formations Last" = true
+"Skip Manual Formations" = false
 "Spend Gold" = false
 "Start with current Formation" = true
 "Suggested Formations" = true
-"Skip Manual Formations" = false
-"Run Manual Formations Last" = true
 
 [General]
 "Assist Limit" = 20
 "Exclude Heroes" = []
 "OCR Engine" = "Tesseract"
 
+["Guild Manager Scan"]
+"AFK Stage Phases to Scan" = 1
+"Confirm Qwen2-VL Download (~2.2 GB)" = false
+"Days to Scan" = 3
+"Debug OCR Output" = false
+"Guild Members API URL" = ""
+"Ignore Day Restrictions" = false
+"Scan AFK Stages Rankings" = false
+"Scan DR Today on Sunday" = false
+"Scan Guild Activeness" = false
+"Scan Supreme Arena" = false
+"Use Qwen2-VL (GPU)" = false
+
+[Homestead]
+"Craft Item Limit" = 80
+
 ["Legend Trial"]
 Attempts = 5
 Formations = 10
+"Run Manual Formations Last" = true
 "Skip Manual Formations" = false
 "Spend Gold" = false
 "Start with current Formation" = true
 "Suggested Formations" = true
-"Run Manual Formations Last" = true
 Towers = [
     "Lightbearer",
     "Wilder",
@@ -90,18 +135,27 @@ Towers = [
     "Mauler",
 ]
 
-["Titan Reaver Proxy Battles"]
-"Titan Reaver Proxy Battle Limit" = 50
-
 ["Ravaged Realm"]
-Squads = ["Lightbearer", "Wilder", "Graveborn", "Mauler"]
 Attempts = 5
-"Suggested Formations" = true
 "Spend Gold" = false
-
-[Homestead]
-"Craft Item Limit" = 80
+Squads = [
+    "Lightbearer",
+    "Wilder",
+    "Graveborn",
+    "Mauler",
+]
+"Suggested Formations" = true
 
 ["Supreme Arena"]
 Attempts = 5
 "Opponent Position" = "Left"
+
+["Titan Reaver Proxy Battles"]
+"Titan Reaver Proxy Battle Limit" = 50
+
+["WDB Modes"]
+Auto-Bet = true
+"Auto-Bet Confidence %" = 58
+"Auto-Bet Slider Offset" = 18
+"Save Draft Screenshots" = true
+"Screenshot Folder" = "/mnt/vault/adbautoplayer/solstice-frames"
